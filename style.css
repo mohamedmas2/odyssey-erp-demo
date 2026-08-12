@@ -430,6 +430,100 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.contact-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: min(100%, 560px);
+  padding: 34px 28px;
+  text-align: center;
+  color: #f7fbff;
+  background: linear-gradient(180deg, #0a1d38, #07162d);
+  border: 1px solid rgba(114, 164, 255, 0.22);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(7, 22, 45, 0.28);
+}
+
+.contact-logo {
+  font-size: clamp(2.3rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.contact-logo span {
+  color: #22b8cf;
+}
+
+.contact-tag {
+  margin: 14px 0 24px;
+  color: #cbd8e6;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.contact-main-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 18px;
+  margin-bottom: 22px;
+  color: #071b33;
+  background: #22b8cf;
+  border-radius: 16px;
+  font-weight: 900;
+}
+
+.contact-qr {
+  width: min(220px, 68vw);
+  margin: 0 auto 22px;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+.contact-qr img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-site {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-social a {
+  padding: 10px 14px;
+  border: 1px solid #49627c;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.contact-email {
+  margin-top: 20px;
+  color: #cbd8e6;
+}
+
+.contact-email a {
+  color: #ffffff;
+}
+
+#dynamicShowcaseMount {
+  display: contents;
+}
+
 .showcase-card:first-child {
   grid-column: 1 / -1;
 }

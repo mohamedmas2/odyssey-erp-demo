@@ -171,6 +171,7 @@ const form = document.getElementById("demoForm");
 const formMessage = document.getElementById("formMessage");
 const submitButton = document.getElementById("formSubmitButton");
 const hiddenFrame = document.getElementById("leadCaptureFrame");
+const dynamicShowcaseMount = document.getElementById("dynamicShowcaseMount");
 const fields = Array.from(form.querySelectorAll("input:not([type='hidden'])"));
 
 const APP_CONFIG = window.ODYSSEY_DEMO_CONFIG || {};
@@ -184,6 +185,47 @@ const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matc
 let submitTimeoutId = null;
 let pendingSubmissionKey = "";
 let isSubmitting = false;
+
+function prettifyFileName(fileName) {
+  return String(fileName || "")
+    .replace(/\.[^.]+$/, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function renderAutoGallery() {
+  if (!dynamicShowcaseMount) return;
+
+  const items = Array.isArray(window.ODYSSEY_GALLERY_IMAGES)
+    ? window.ODYSSEY_GALLERY_IMAGES
+    : [];
+
+  if (!items.length) {
+    dynamicShowcaseMount.innerHTML = "";
+    return;
+  }
+
+  dynamicShowcaseMount.innerHTML = items
+    .map((item) => {
+      const src = typeof item === "string" ? item : item.src;
+      const title = typeof item === "string" ? prettifyFileName(item.split("/").pop()) : prettifyFileName(item.title || item.src.split("/").pop());
+      const alt = typeof item === "string" ? title : item.alt || title;
+
+      return `
+        <article class="showcase-card reveal">
+          <div class="showcase-copy">
+            <span>Added from your gallery</span>
+            <h3>${title}</h3>
+          </div>
+          <img src="${src}" alt="${alt}">
+        </article>
+      `;
+    })
+    .join("");
+
+  dynamicShowcaseMount.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+}
 
 function t(key) {
   const language = body.dataset.language === "ar" ? "ar" : "en";
@@ -480,5 +522,6 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
+renderAutoGallery();
 applyLanguage(savedLanguage);
 applyTheme(savedTheme || (systemPrefersDark ? "dark" : "light"));
