@@ -108,7 +108,8 @@ body[data-theme="dark"] .topbar {
 }
 
 .brand img {
-  width: clamp(132px, 16vw, 170px);
+  width: clamp(116px, 14vw, 156px);
+  object-fit: contain;
 }
 
 .nav {

@@ -16,3 +16,10 @@ Faster option:
 run refresh-landing-gallery.ps1
 
 This updates the gallery manifest in one step and leaves the project ready for GitHub publishing.
+
+One-click publish:
+run publish-landing-gallery.ps1
+
+This updates the gallery, saves the landing-page changes, and pushes them to GitHub.
+
+It also publishes the current landing-page logo and cover image.
