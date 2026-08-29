@@ -801,3 +801,317 @@ body[data-theme="dark"] .demo-form {
     padding: 20px 20px 14px;
   }
 }
+
+/* ===== ADDED: Risk Reversal Banner ===== */
+.risk-banner {
+  margin-top: 18px;
+  padding: 14px 22px;
+  text-align: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(21, 101, 240, 0.14), rgba(32, 196, 218, 0.14));
+  border: 1px solid var(--surface-border);
+}
+
+.risk-banner p {
+  margin: 0;
+  color: var(--primary-strong);
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+body[data-theme="dark"] .risk-banner p {
+  color: var(--primary-strong);
+}
+/* ===== END ADDED: Risk Reversal Banner ===== */
+
+/* ===== ADDED: Section-end CTA ===== */
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+/* ===== END ADDED: Section-end CTA ===== */
+
+/* ===== ADDED: How It Works Section ===== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.step-card {
+  position: relative;
+  padding: 28px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.step-icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--text-inverse);
+}
+
+.step-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.step-number {
+  position: absolute;
+  top: 24px;
+  inset-inline-end: 28px;
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  opacity: 0.6;
+}
+
+.step-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== END ADDED: How It Works Section ===== */
+
+/* ===== ADDED: Pricing Section ===== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 26px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.price-card-highlight {
+  border-color: var(--primary);
+  background:
+    linear-gradient(135deg, rgba(21, 101, 240, 0.14), rgba(32, 196, 218, 0.08)),
+    var(--surface);
+  box-shadow: var(--shadow);
+  transform: translateY(-6px);
+}
+
+.price-badge {
+  position: absolute;
+  top: -14px;
+  inset-inline-start: 26px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--text-inverse);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.price-card h3 {
+  margin: 6px 0 14px;
+  font-size: 1.4rem;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 6px;
+}
+
+.price-amount {
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.price-period {
+  color: var(--text-soft);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.price-desc {
+  margin: 0 0 22px;
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.price-features {
+  flex: 1;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.price-features li {
+  position: relative;
+  padding-inline-start: 26px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.price-features li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+@media (max-width: 1100px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card-highlight {
+    transform: none;
+  }
+}
+/* ===== END ADDED: Pricing Section ===== */
+
+/* ===== ADDED: Testimonials Placeholder Section ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-card {
+  padding: 28px;
+  text-align: center;
+  border: 1px dashed var(--surface-border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--text-soft);
+}
+
+.testimonial-avatar svg {
+  width: 30px;
+  height: 30px;
+}
+
+.testimonial-quote {
+  margin: 0 0 10px;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+.testimonial-name {
+  margin: 0;
+  font-weight: 800;
+  color: var(--text-soft);
+  opacity: 0.75;
+}
+
+@media (max-width: 1100px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== END ADDED: Testimonials Placeholder Section ===== */
+
+/* ===== ADDED: Sticky WhatsApp Button ===== */
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.42);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.whatsapp-fab .whatsapp-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 0.92rem;
+  opacity: 0;
+  transition: max-width 0.25s ease, opacity 0.2s ease;
+}
+
+.whatsapp-fab:hover,
+.whatsapp-fab:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-fab:hover .whatsapp-label,
+.whatsapp-fab:focus-visible .whatsapp-label {
+  max-width: 160px;
+  opacity: 1;
+  padding-inline-end: 4px;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-fab {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px;
+  }
+
+  .whatsapp-fab .whatsapp-label {
+    display: none;
+  }
+}
+/* ===== END ADDED: Sticky WhatsApp Button ===== */
