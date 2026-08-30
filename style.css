@@ -108,8 +108,10 @@ body[data-theme="dark"] .topbar {
 }
 
 .brand img {
-  width: clamp(116px, 14vw, 156px);
-  object-fit: contain;
+  width: clamp(48px, 6vw, 64px);
+  height: clamp(48px, 6vw, 64px);
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .nav {
@@ -233,9 +235,9 @@ body[data-theme="dark"] .theme-icon-dark {
 .section-heading h2,
 .cta-copy h2 {
   margin: 20px 0 18px;
-  font-size: clamp(2.6rem, 5vw, 5.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .section-heading h2,
@@ -564,6 +566,14 @@ video {
   border-top-right-radius: 0;
 }
 
+/* ADDED: normalize showcase/gallery image sizing so every card matches */
+.showcase-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  max-height: 260px;
+}
+/* END ADDED */
+
 .cta-card {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -771,7 +781,8 @@ body[data-theme="dark"] .demo-form {
   }
 
   .brand img {
-    width: 122px;
+    width: 44px;
+    height: 44px;
   }
 
   .control-btn {
@@ -800,23 +811,48 @@ body[data-theme="dark"] .demo-form {
   .video-meta {
     padding: 20px 20px 14px;
   }
+
+  /* ADDED: smaller, tighter hero heading on narrow screens */
+  .hero h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .section-heading h2,
+  .cta-copy h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+  /* END ADDED */
 }
 
 /* ===== ADDED: Risk Reversal Banner ===== */
 .risk-banner {
   margin-top: 18px;
-  padding: 14px 22px;
+  padding: 18px 24px;
   text-align: center;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(21, 101, 240, 0.14), rgba(32, 196, 218, 0.14));
+  background: linear-gradient(135deg, rgba(21, 101, 240, 0.16), rgba(32, 196, 218, 0.16));
   border: 1px solid var(--surface-border);
 }
 
 .risk-banner p {
   margin: 0;
   color: var(--primary-strong);
-  font-weight: 800;
-  font-size: 0.98rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .risk-banner p {
+    font-size: 1.02rem;
+  }
 }
 
 body[data-theme="dark"] .risk-banner p {
@@ -1005,57 +1041,6 @@ body[data-theme="dark"] .risk-banner p {
 }
 /* ===== END ADDED: Pricing Section ===== */
 
-/* ===== ADDED: Testimonials Placeholder Section ===== */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.testimonial-card {
-  padding: 28px;
-  text-align: center;
-  border: 1px dashed var(--surface-border);
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-}
-
-.testimonial-avatar {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--primary-soft);
-  color: var(--text-soft);
-}
-
-.testimonial-avatar svg {
-  width: 30px;
-  height: 30px;
-}
-
-.testimonial-quote {
-  margin: 0 0 10px;
-  color: var(--text-soft);
-  font-style: italic;
-}
-
-.testimonial-name {
-  margin: 0;
-  font-weight: 800;
-  color: var(--text-soft);
-  opacity: 0.75;
-}
-
-@media (max-width: 1100px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===== END ADDED: Testimonials Placeholder Section ===== */
 
 /* ===== ADDED: Sticky WhatsApp Button ===== */
 .whatsapp-fab {

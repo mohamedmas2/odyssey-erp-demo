@@ -115,10 +115,6 @@ const translations = {
     plan3Feature2: "Dedicated account manager",
     plan3Feature3: "Custom approval workflows",
     plan3CTA: "Book Free Consultation",
-    testimonialsEyebrow: "Success Stories",
-    testimonialsTitle: "Success Stories",
-    testimonialsSubtitle: "Coming soon — our first client stories.",
-    testimonialPlaceholder: "Coming soon",
     whatsappLabel: "Chat with us"
     /* END ADDED: new i18n keys */
   },
@@ -238,10 +234,6 @@ const translations = {
     plan3Feature2: "مدير حساب مخصص",
     plan3Feature3: "مسارات موافقات مخصصة",
     plan3CTA: "احجز استشارة مجانية",
-    testimonialsEyebrow: "قصص النجاح",
-    testimonialsTitle: "قصص النجاح",
-    testimonialsSubtitle: "قريبًا — قصص أول عملائنا.",
-    testimonialPlaceholder: "قريبًا",
     whatsappLabel: "تواصل معنا"
     /* END ADDED: new i18n keys */
   }
@@ -301,7 +293,6 @@ function renderAutoGallery() {
       return `
         <article class="showcase-card reveal">
           <div class="showcase-copy">
-            <span>Added from your gallery</span>
             <h3>${title}</h3>
           </div>
           <img src="${src}" alt="${alt}">
