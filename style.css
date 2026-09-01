@@ -311,6 +311,29 @@ body[data-theme="dark"] .theme-icon-dark {
   margin-top: 34px;
 }
 
+.hero-metrics-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hero-metrics-4 .metric-card {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.hero-metrics-4 .metric-card strong {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.hero-metrics-4 .metric-card span {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 .metric-card,
 .feature-card,
 .comparison-card,
@@ -574,6 +597,13 @@ video {
 }
 /* END ADDED */
 
+/* REWRITTEN: keep the portrait notification screenshot's text legible when cropped to the 4:3 showcase grid */
+.showcase-card img.showcase-img-notification {
+  object-position: center bottom;
+  background: #1a2530;
+}
+/* END REWRITTEN */
+
 .cta-card {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -740,6 +770,10 @@ body[data-theme="dark"] .demo-form {
   .hero-metrics {
     grid-template-columns: 1fr;
   }
+
+  .hero-metrics-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -814,9 +848,10 @@ body[data-theme="dark"] .demo-form {
 
   /* ADDED: smaller, tighter hero heading on narrow screens */
   .hero h1 {
-    font-size: 1.7rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    font-size: 1.5rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    max-width: 21ch;
   }
 
   .section-heading h2,
@@ -938,6 +973,151 @@ body[data-theme="dark"] .risk-banner p {
   align-items: stretch;
 }
 
+.pricing-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pricing-grid-4 .price-card {
+  padding: 26px 22px;
+}
+
+.pricing-grid-4 h3 {
+  font-size: 1.1rem;
+  order: 1;
+  margin-top: 4px;
+}
+
+.pricing-grid-4 .price-badge {
+  order: 0;
+}
+
+.pricing-grid-4 .price-tag {
+  order: 2;
+}
+
+.pricing-grid-4 .price-amount {
+  font-size: 1.6rem;
+}
+
+.pricing-grid-4 .price-desc {
+  order: 3;
+}
+
+.pricing-grid-4 .price-features {
+  order: 4;
+  flex-grow: 1;
+}
+
+.pricing-grid-4 .price-card-for {
+  order: 5;
+  font-size: 0.76rem;
+  opacity: 0.75;
+  padding-top: 12px;
+  border-top: 1px dashed var(--surface-border);
+  margin-top: 12px;
+}
+
+.pricing-grid-4 .price-card-problem {
+  display: none;
+}
+
+.pricing-grid-4 .price-card-trial {
+  order: 6;
+}
+
+.pricing-grid-4 .btn-block {
+  order: 7;
+}
+
+.pricing-grid-4 .price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.addons-panel {
+  margin-top: 44px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.addons-panel h3 {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.addon-item {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  text-align: center;
+}
+
+.addon-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  background: var(--bg-strong);
+  color: var(--primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.addon-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.addon-item h4 {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+.addon-note {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  margin-bottom: 10px;
+  min-height: 30px;
+}
+
+.addon-price {
+  font-weight: 800;
+  color: var(--primary-strong);
+  font-size: 0.95rem;
+}
+
+.addons-footnote {
+  margin-top: 22px;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .addons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-grid-4,
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .price-card {
   position: relative;
   display: flex;
@@ -976,6 +1156,30 @@ body[data-theme="dark"] .risk-banner p {
   margin: 6px 0 14px;
   font-size: 1.4rem;
 }
+
+/* ADDED: pricing card "for" / "problem" / "trial" sub-fields */
+.price-card-for {
+  margin: 0 0 4px;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.price-card-problem {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.price-card-trial {
+  margin: -10px 0 18px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+/* END ADDED */
 
 .price-tag {
   display: flex;
