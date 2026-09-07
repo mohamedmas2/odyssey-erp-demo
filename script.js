@@ -6,6 +6,10 @@ const translations = {
     navVideos: "Videos",
     navGuide: "Free Guide",
     navDemo: "Request Demo",
+    navHome: "Home",
+    navPricing: "Pricing",
+    navResources: "Resources",
+    navContact: "Contact",
     eyebrow: "One system. One journey. Endless possibilities.",
     heroTitle: "Wake up knowing exactly where your money is",
     heroText: "Odyssey sends your Morning Report to your phone: cash position, who owes you, who you owe, and what needs your approval",
@@ -185,7 +189,13 @@ const translations = {
     plan3Feature2: "Dedicated account manager",
     plan3Feature3: "Custom approval workflows",
     plan3CTA: "Request a Demo",
-    whatsappLabel: "Chat with us"
+    whatsappLabel: "Chat with us",
+    seeAllFeatures: "See All Features & Product Tour",
+    seeAllPlans: "See All Plans & Add-ons",
+    resourcesEyebrow: "Free Resources",
+    resourcesTeaserTitle: "Practical guides for small and growing businesses.",
+    resourcesTeaserText: "Downloadable guides and tips — no signup walls, just useful content.",
+    browseResources: "Browse Free Guides"
     /* END ADDED: new i18n keys */
   },
   ar: {
@@ -195,6 +205,10 @@ const translations = {
     navVideos: "الفيديوهات",
     navGuide: "دليل مجاني",
     navDemo: "اطلب عرضًا",
+    navHome: "الرئيسية",
+    navPricing: "الأسعار",
+    navResources: "الموارد",
+    navContact: "تواصل",
     eyebrow: "نظام واحد. رحلة واحدة. إمكانيات بلا حدود.",
     heroTitle: "أول ما تصحى من النوم — تعرف فلوسك فين",
     heroText: "Odyssey بيجيبلك تقرير الصباح على موبايلك: كام فلوس عندك، مين عليك، مين ليك، وإيه المصروف اللي بانتظار اعتمادك",
@@ -374,7 +388,13 @@ const translations = {
     plan3Feature2: "مدير حساب مخصص",
     plan3Feature3: "مسارات موافقات مخصصة",
     plan3CTA: "اطلب عرضًا",
-    whatsappLabel: "تواصل معنا"
+    whatsappLabel: "تواصل معنا",
+    seeAllFeatures: "شوف كل المزايا وجولة المنتج",
+    seeAllPlans: "شوف كل الباقات والإضافات",
+    resourcesEyebrow: "موارد مجانية",
+    resourcesTeaserTitle: "أدلة عملية لأصحاب الشركات الصغيرة والمتوسطة.",
+    resourcesTeaserText: "أدلة قابلة للتحميل ونصائح عملية — من غير أي فورم تسجيل، محتوى مفيد بس.",
+    browseResources: "تصفح الأدلة المجانية"
     /* END ADDED: new i18n keys */
   }
 };
@@ -390,7 +410,7 @@ const formMessage = document.getElementById("formMessage");
 const submitButton = document.getElementById("formSubmitButton");
 const hiddenFrame = document.getElementById("leadCaptureFrame");
 const dynamicShowcaseMount = document.getElementById("dynamicShowcaseMount");
-const fields = Array.from(form.querySelectorAll("input:not([type='hidden'])"));
+const fields = form ? Array.from(form.querySelectorAll("input:not([type='hidden'])")) : [];
 
 const APP_CONFIG = window.ODYSSEY_DEMO_CONFIG || {};
 const APP_SCRIPT_URL = (APP_CONFIG.webAppUrl || "").trim();
@@ -629,7 +649,7 @@ window.addEventListener("message", (event) => {
   handleSubmissionResponse(payload);
 });
 
-form.addEventListener("submit", (event) => {
+if (form) form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (isSubmitting) return;
@@ -688,7 +708,7 @@ function applyLanguage(language) {
     }
   });
 
-  if (formMessage.dataset.state === "idle") {
+  if (formMessage && formMessage.dataset.state === "idle") {
     formMessage.textContent = content.formNote;
   }
 

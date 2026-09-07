@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الموارد والأدلة | Odyssey ERP</title>
+  <meta
+    name="description"
+    content="أدلة وموارد مجانية من Odyssey ERP لأصحاب الشركات الصغيرة والمتوسطة — أرقام مالية، نصائح عملية، وأدوات جاهزة للتحميل."
+  >
+  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYQVPVSGE7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DYQVPVSGE7');
+  </script>
+  <style>
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+    .resource-card .resource-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 800;
+      width: fit-content;
+    }
+    .resource-card h3 { margin: 0 0 10px; font-size: 1.2rem; }
+    .resource-card p { flex: 1; margin: 0 0 18px; color: var(--text-soft); line-height: 1.7; }
+    .resource-card-soon {
+      opacity: 0.6;
+    }
+    @media (max-width: 1100px) {
+      .resources-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Odyssey ERP">
+        <img src="Odyssey_ERP_Logo_Round.png" alt="Odyssey ERP logo">
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">الرئيسية</a>
+        <a href="features.html">المزايا</a>
+        <a href="pricing.html">الأسعار</a>
+        <a href="resources.html">الموارد</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="control-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span class="theme-icon theme-icon-light" aria-hidden="true">Light</span>
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">Dark</span>
+        </button>
+        <button class="menu-btn" id="menuToggle" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">موارد مجانية</span>
+          <h2>أدلة ونصائح عملية لأصحاب الشركات الصغيرة والمتوسطة</h2>
+          <p>محتوى بنبنيه بمرور الوقت — أدلة قابلة للتحميل، نصائح مالية عملية، وأدوات تساعدك تدير شركتك بثقة أكتر.</p>
+        </div>
+
+        <div class="resources-grid">
+          <article class="resource-card reveal">
+            <span class="resource-tag">دليل مجاني — PDF</span>
+            <h3>5 أرقام لازم تعرفهم كل أسبوع قبل ما تاخد أي قرار</h3>
+            <p>هامش الربح، التدفق النقدي، أيام التحصيل، معدل الاحتراق، وتكلفة جذب العميل — بالصيغة والمثال والإجراء لكل رقم.</p>
+            <a class="btn btn-primary btn-block" href="guide-5-numbers.html">اقرأ الدليل</a>
+          </article>
+
+          <article class="resource-card resource-card-soon reveal">
+            <span class="resource-tag">قريبًا</span>
+            <h3>دليل إقفال نهاية الشهر خطوة بخطوة</h3>
+            <p>قائمة تحقق عملية لإقفال حسابات الشهر بسرعة ودقة، مناسبة لأصحاب الشركات الصغيرة والمتوسطة.</p>
+          </article>
+
+          <article class="resource-card resource-card-soon reveal">
+            <span class="resource-tag">قريبًا</span>
+            <h3>دليل اختيار نظام محاسبي مناسب لشركتك</h3>
+            <p>الأسئلة اللي لازم تسألها قبل ما تختار أي نظام ERP أو محاسبي لشركتك.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Odyssey ERP. نظام واحد. رحلة واحدة. إمكانيات بلا حدود.</p>
+    </footer>
+  </div>
+
+  <a
+    class="whatsapp-fab"
+    id="whatsappFab"
+    href="https://wa.me/201555568029"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16.02 3C9.4 3 4 8.36 4 14.94c0 2.35.66 4.55 1.8 6.43L4 29l7.83-1.75a12.9 12.9 0 0 0 4.19.7c6.62 0 12.02-5.36 12.02-11.94C28.04 8.36 22.64 3 16.02 3zm0 21.7c-1.53 0-2.99-.36-4.29-1.05l-.31-.17-3.63.81.78-3.58-.2-.32a9.7 9.7 0 0 1-1.55-5.25c0-5.37 4.4-9.75 9.8-9.75s9.8 4.38 9.8 9.75-4.4 9.56-9.8 9.56zm5.47-7.33c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+    </svg>
+    <span class="whatsapp-label">تواصل معنا</span>
+  </a>
+
+  <script>
+    const body = document.body;
+    const savedTheme = localStorage.getItem("odyssey-theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    body.dataset.theme = savedTheme || (systemPrefersDark ? "dark" : "light");
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const next = body.dataset.theme === "dark" ? "light" : "dark";
+      body.dataset.theme = next;
+      localStorage.setItem("odyssey-theme", next);
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.querySelector(".nav");
+    menuToggle.addEventListener("click", () => nav.classList.toggle("is-open"));
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("is-open")));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
