@@ -9,6 +9,48 @@
     content="Odyssey ERP unifies finance, operations, approvals, reporting, and analytics in one modern platform built for growing businesses."
   >
   <link rel="stylesheet" href="style.css">
+  <style>
+    .metrics-band { padding-top: 8px; padding-bottom: 8px; }
+    .metrics-band-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .metric-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 26px 20px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(12px);
+    }
+    .metric-tile-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--text-inverse);
+    }
+    .metric-tile-icon svg { width: 26px; height: 26px; }
+    .metric-tile strong { display: block; font-size: 1.3rem; margin-bottom: 8px; }
+    .metric-tile span { font-size: 0.88rem; line-height: 1.55; color: var(--text-soft); }
+    @media (max-width: 1100px) {
+      .metrics-band-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .metrics-band-grid { grid-template-columns: 1fr; }
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DYQVPVSGE7"></script>
   <script>
@@ -61,25 +103,6 @@
             <a class="btn btn-secondary" href="features.html#showcase" data-i18n="heroSecondary">Explore Product Screens</a>
             <a class="btn btn-secondary" href="resources.html" data-i18n="navGuide">Free Guide</a>
           </div>
-
-          <div class="hero-metrics hero-metrics-4">
-            <article class="metric-card">
-              <strong data-i18n="metricOneTitle">Real accountant</strong>
-              <span data-i18n="metricOne">Assigned to your company — not a bot, not a video tutorial</span>
-            </article>
-            <article class="metric-card">
-              <strong data-i18n="metricTwoTitle">48 hours</strong>
-              <span data-i18n="metricTwo">To start entering your first invoice</span>
-            </article>
-            <article class="metric-card">
-              <strong data-i18n="metricThreeTitle">15+</strong>
-              <span data-i18n="metricThree">Financial and management reports, ready instantly</span>
-            </article>
-            <article class="metric-card">
-              <strong data-i18n="metricFourTitle">Connected</strong>
-              <span data-i18n="metricFour">Every department feeds the same numbers — nothing conflicts</span>
-            </article>
-          </div>
         </div>
 
         <div class="hero-visual reveal">
@@ -87,6 +110,53 @@
           <div class="device-frame">
             <img src="Cover.png" alt="Odyssey ERP cover artwork">
           </div>
+        </div>
+      </section>
+
+      <section class="section metrics-band reveal" aria-label="Key numbers">
+        <div class="metrics-band-grid">
+          <article class="metric-tile">
+            <span class="metric-tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M4.5 20c0-3.6 3.36-6 7.5-6s7.5 2.4 7.5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong data-i18n="metricOneTitle">Real accountant</strong>
+            <span data-i18n="metricOne">Assigned to your company — not a bot, not a video tutorial</span>
+          </article>
+          <article class="metric-tile">
+            <span class="metric-tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <strong data-i18n="metricTwoTitle">48 hours</strong>
+            <span data-i18n="metricTwo">To start entering your first invoice</span>
+          </article>
+          <article class="metric-tile">
+            <span class="metric-tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4.5h9l3 3V19.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M8.5 10.5h7M8.5 14h7M8.5 17.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong data-i18n="metricThreeTitle">15+</strong>
+            <span data-i18n="metricThree">Financial and management reports, ready instantly</span>
+          </article>
+          <article class="metric-tile">
+            <span class="metric-tile-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="6" r="2.2" stroke="currentColor" stroke-width="1.7"/>
+                <circle cx="18" cy="6" r="2.2" stroke="currentColor" stroke-width="1.7"/>
+                <circle cx="12" cy="18" r="2.2" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M7.7 7.2 10.5 16M16.3 7.2 13.5 16M8.2 6h7.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong data-i18n="metricFourTitle">Connected</strong>
+            <span data-i18n="metricFour">Every department feeds the same numbers — nothing conflicts</span>
+          </article>
         </div>
       </section>
 
@@ -134,24 +204,10 @@
       </section>
 
       <section class="section pricing-teaser" id="pricing-teaser">
-        <div class="section-heading reveal">
+        <div class="section-heading reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
           <span class="eyebrow" data-i18n="pricingEyebrow">Pricing</span>
           <h2 data-i18n="pricingTitle">Simple, transparent plans for growing businesses.</h2>
           <p data-i18n="pricingSubtitle">Every plan includes the Odyssey ERP platform and ongoing accounting support — not software alone.</p>
-        </div>
-
-        <div class="pricing-grid" style="max-width:420px;margin:0 auto;">
-          <article class="price-card price-card-highlight reveal">
-            <span class="price-badge" data-i18n="popularBadge">Most Popular</span>
-            <h3 data-i18n="plan1Name">Odyssey Accounting</h3>
-            <p class="price-tag"><span class="price-amount" data-i18n="plan1Price">9,000 EGP</span><span class="price-period" data-i18n="perMonth">/ month</span></p>
-            <p class="price-desc" data-i18n="plan1Desc">Best for starting out</p>
-            <ul class="price-features">
-              <li data-i18n="plan1Feat1">Daily Morning Report</li>
-              <li data-i18n="plan1Feat2">Monthly financial report</li>
-              <li data-i18n="plan1Feat3">Ongoing accounting support</li>
-            </ul>
-          </article>
         </div>
 
         <div class="section-cta reveal">
