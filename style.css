@@ -240,6 +240,12 @@ body[data-theme="dark"] .theme-icon-dark {
   letter-spacing: -0.03em;
 }
 
+/* Arabic hero headline: smaller and kept to a single line */
+body[dir="rtl"] .hero h1 {
+  font-size: clamp(1.4rem, 2.3vw, 2.3rem);
+  white-space: nowrap;
+}
+
 .section-heading h2,
 .cta-copy h2 {
   font-size: clamp(2rem, 3vw, 3.4rem);
@@ -852,6 +858,12 @@ body[data-theme="dark"] .demo-form {
     line-height: 1.35;
     letter-spacing: -0.01em;
     max-width: 21ch;
+  }
+
+  body[dir="rtl"] .hero h1 {
+    font-size: 1.15rem;
+    white-space: normal;
+    max-width: none;
   }
 
   .section-heading h2,
