@@ -712,6 +712,7 @@ function handleSubmissionResponse(payload) {
     form.reset();
     clearValidationErrors();
     setMessage("success", t("formSuccess"));
+    if (typeof fbq === "function") fbq("track", "Lead");
     return;
   }
 

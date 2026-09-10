@@ -17,6 +17,23 @@
     gtag('js', new Date());
     gtag('config', 'G-DYQVPVSGE7');
   </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1786063249489618');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1786063249489618&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <style>
     /* Page-specific additions — reuse site tokens, add only what the guide needs */
     .guide-hero {
@@ -153,7 +170,7 @@
         <h1 data-i18n="guideH1">5 numbers you need to know every week before making any decision</h1>
         <p data-i18n="guideIntro">A practical guide for small and growing business owners — no complicated jargon. Every number comes with the formula, why it matters, a real example, and the action to take.</p>
         <div class="guide-download-row">
-          <a class="btn btn-primary" href="Odyssey_5_Numbers_Guide.pdf" download data-i18n="guideDownloadPdf">Download the PDF Guide</a>
+          <a class="btn btn-primary" href="Odyssey_5_Numbers_Guide.pdf" download data-i18n="guideDownloadPdf" onclick="if (typeof fbq === 'function') fbq('trackCustom', 'GuidePDFDownload');">Download the PDF Guide</a>
           <a class="btn btn-secondary" href="contact.html#demo" data-i18n="guideBookConsult">Book a Free Consultation</a>
         </div>
       </section>
