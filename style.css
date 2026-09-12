@@ -215,7 +215,6 @@ body[data-theme="dark"] .theme-icon-dark {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: 42px;
-  min-height: calc(100vh - 130px);
 }
 
 .eyebrow {
