@@ -431,6 +431,16 @@ video {
   gap: 20px;
 }
 
+.comparison-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.comparison-card-mid {
+  background:
+    linear-gradient(135deg, rgba(214, 158, 46, 0.1), rgba(214, 158, 46, 0.03)),
+    var(--surface);
+}
+
 .comparison-card {
   padding: 28px;
 }
