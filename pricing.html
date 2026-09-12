@@ -46,6 +46,40 @@
     src="https://www.facebook.com/tr?id=1786063249489618&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <style>
+    .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq-item {
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 4px 20px;
+    }
+    .faq-item summary {
+      padding: 16px 0;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--primary);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      margin: 0 0 18px;
+      color: var(--text-soft);
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
   <div class="site-shell">
@@ -207,6 +241,44 @@
 
         <div class="section-cta reveal">
           <a class="btn btn-primary" href="contact.html#demo" data-i18n="featuresSectionCta">Book Your Free Consultation</a>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading reveal">
+          <span class="eyebrow" data-i18n="faqEyebrow">FAQ</span>
+          <h2 data-i18n="faqTitle">Questions people actually ask before signing up</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary data-i18n="faq1Q">Is my financial data safe?</summary>
+            <p data-i18n="faq1A">Yes. Your data is stored in an isolated database with access control per user — not a shared spreadsheet anyone can open. Only the people you give accounts to can see your company's numbers.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq2Q">Is there a minimum contract period, or can I cancel anytime?</summary>
+            <p data-i18n="faq2A">No lock-in contract. It's a monthly subscription — if it's not working for you, you cancel and stop paying from the next month.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq3Q">Do I need to install anything or buy special hardware?</summary>
+            <p data-i18n="faq3A">No. Odyssey runs in your browser on any computer, plus a dedicated mobile app for Android. No servers, no IT setup on your end.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq4Q">Who actually enters my invoices and data into the system?</summary>
+            <p data-i18n="faq4A">In the Accounting and Business plans, our team enters your invoices, sales, and purchases for you — you don't have to touch the system yourself unless you want to. You just check the Morning Report and approve what needs your decision.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq5Q">Does Odyssey support Egypt's e-invoicing system?</summary>
+            <p data-i18n="faq5A">Yes, e-invoicing is built in — invoices are compliant with Egyptian Tax Authority requirements without a separate manual export step.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq6Q">Is Odyssey suitable for a retail shop or supermarket with a cash register?</summary>
+            <p data-i18n="faq6A">Honestly — not yet. Odyssey today is built for businesses that invoice fixed customers (wholesale, distribution, manufacturing, services), not fast walk-in retail checkout. If that's your business, you need a dedicated POS system first; Odyssey is a strong fit for the accounting and reporting side alongside it.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq7Q">What happens if my internet connection drops?</summary>
+            <p data-i18n="faq7A">Odyssey is cloud-based, so it needs an internet connection to work, same as any online banking or email service. You can pick up exactly where you left off the moment you're back online.</p>
+          </details>
         </div>
       </section>
     </main>
