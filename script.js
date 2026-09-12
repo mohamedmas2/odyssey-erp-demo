@@ -248,7 +248,7 @@ const translations = {
 
     whyEyebrow: "Product Report",
     whyHeroTitle: "What Odyssey actually does, and why you'd leave Excel for it",
-    whyHeroIntro: "Grounded in an actual review of the system's code, not generic marketing copy — every feature listed here genuinely exists in the system.",
+    whyHeroIntro: "Grounded in an actual review, not generic marketing copy — every feature listed here genuinely exists in the system.",
     whyExploreCta: "Explore the 12 modules",
 
     whyModulesEyebrow: "1. What Odyssey does",
@@ -591,7 +591,7 @@ const translations = {
 
     whyEyebrow: "تقرير المنتج",
     whyHeroTitle: "أوديسي بيعمل إيه بالظبط، وليه حد يسيب الإكسل عشانه",
-    whyHeroIntro: "مبني على مراجعة فعلية لكود النظام، مش وصف تسويقي عام — كل ميزة مذكورة هنا موجودة فعليًا في النظام.",
+    whyHeroIntro: "مبني على مراجعة فعلية، مش وصف تسويقي عام — كل ميزة مذكورة هنا موجودة فعليًا في النظام.",
     whyExploreCta: "استعراض المكونات الاثني عشر",
 
     whyModulesEyebrow: "1. أوديسي بيعمل إيه بالظبط",
