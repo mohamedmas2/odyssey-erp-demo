@@ -438,7 +438,7 @@ const translations = {
     chooseSummaryHeadType: "Your business type",
     chooseSummaryHeadFocus: "Focus on",
     chooseSummaryRow1Type: "Fast retail (supermarket, café)",
-    chooseSummaryRow1Focus: "A dedicated POS system with accounting integration, not a full ERP",
+    chooseSummaryRow1Focus: "Odyssey now has a built-in POS, directly integrated with your accounting",
     chooseSummaryRow2Type: "Wholesale / distribution / manufacturing",
     chooseSummaryRow2Focus: "A system strong in invoicing, inventory, and financial reports",
     chooseSummaryRow3Type: "Services / contracting",
@@ -446,7 +446,7 @@ const translations = {
     chooseSummaryRow4Type: "Multi-branch company",
     chooseSummaryRow4Focus: "A system that supports branch separation, approvals, and consolidated reports",
     chooseHonestyLabel: "One honest closing note:",
-    chooseHonestyText: " if your business is fast retail with a cashier, look for a dedicated POS system first, then connect it to an accounting system like Odyssey for the financial side — don't try to use one accounting system for everything from the cash register to the financial reports.",
+    chooseHonestyText: " if your business is fast retail with a cashier, Odyssey now has a built-in point-of-sale (POS) system, connected to the same accounting data — you don't need two separate systems linked together.",
     chooseSecondaryLink: "5 Numbers Guide"
     /* END ADDED: new i18n keys */
   },
@@ -889,7 +889,7 @@ const translations = {
     chooseSummaryHeadType: "نوع نشاطك",
     chooseSummaryHeadFocus: "محتاج تركّز على",
     chooseSummaryRow1Type: "بيع تجزئة سريع (سوبر ماركت، كافيه)",
-    chooseSummaryRow1Focus: "نظام POS متخصص مع تكامل محاسبي، مش ERP كامل",
+    chooseSummaryRow1Focus: "أوديسي بقى فيه نظام POS مدمج، مع تكامل مباشر مع الحسابات",
     chooseSummaryRow2Type: "تجارة جملة/توزيع/تصنيع",
     chooseSummaryRow2Focus: "نظام قوي في الفواتير والمخزون والتقارير المالية",
     chooseSummaryRow3Type: "خدمات/مقاولات",
@@ -897,7 +897,7 @@ const translations = {
     chooseSummaryRow4Type: "شركة متعددة الفروع",
     chooseSummaryRow4Focus: "نظام بيدعم فصل الفروع + موافقات + تقارير مجمّعة",
     chooseHonestyLabel: "ملاحظة أخيرة بصراحة:",
-    chooseHonestyText: " لو نوع نشاطك بيع تجزئة سريع بكاشير، دور على نظام POS متخصص الأول، وبعدين اربطه بنظام محاسبي زي أوديسي للجزء المالي — مش تحاول تستخدم نظام محاسبي واحد لكل حاجة من الكاشير للتقارير المالية.",
+    chooseHonestyText: " لو نوع نشاطك بيع تجزئة سريع بكاشير، أوديسي دلوقتي فيه نظام نقطة بيع (POS) مدمج مع نفس بياناتك المحاسبية — مش محتاج نظامين منفصلين تربطهم ببعض.",
     chooseSecondaryLink: "دليل الـ5 أرقام"
     /* END ADDED: new i18n keys */
   }
