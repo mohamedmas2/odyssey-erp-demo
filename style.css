@@ -1470,3 +1470,57 @@ body[data-theme="dark"] .risk-banner p {
   }
 }
 /* ===== END ADDED: Sticky WhatsApp Button ===== */
+
+/* ===== ADDED: Screenshot lightbox (click any product screenshot to enlarge) ===== */
+.showcase-card img,
+.journey-shot img {
+  cursor: zoom-in;
+}
+
+.odyssey-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(8, 14, 28, 0.86);
+  backdrop-filter: blur(2px);
+}
+
+.odyssey-lightbox.is-open {
+  display: flex;
+}
+
+.odyssey-lightbox img {
+  max-width: min(92vw, 1100px);
+  max-height: 88vh;
+  border-radius: var(--radius-md, 12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  cursor: zoom-out;
+}
+
+.odyssey-lightbox-close {
+  position: absolute;
+  top: 20px;
+  inset-inline-end: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.odyssey-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+/* ===== END ADDED: Screenshot lightbox ===== */

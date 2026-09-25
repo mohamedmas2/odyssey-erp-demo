@@ -1275,3 +1275,47 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
 renderAutoGallery();
 applyLanguage(savedLanguage);
 applyTheme(savedTheme || (systemPrefersDark ? "dark" : "light"));
+
+/* ===== ADDED: Screenshot lightbox — click any product screenshot to enlarge it.
+   Delegated on document (not bound per-image) so it also covers the gallery
+   images renderAutoGallery() injects dynamically after this script runs. */
+(function setupScreenshotLightbox() {
+  const lightbox = document.createElement("div");
+  lightbox.className = "odyssey-lightbox";
+  lightbox.innerHTML = `
+    <button type="button" class="odyssey-lightbox-close" aria-label="Close">&times;</button>
+    <img alt="">
+  `;
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector("img");
+  const closeBtn = lightbox.querySelector(".odyssey-lightbox-close");
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.style.overflow = "";
+    lightboxImg.src = "";
+  }
+
+  document.addEventListener("click", (event) => {
+    const img = event.target.closest(".showcase-card img, .journey-shot img");
+    if (img) {
+      openLightbox(img.currentSrc || img.src, img.alt);
+    }
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target === lightboxImg) closeLightbox();
+  });
+  closeBtn.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+  });
+})();
+/* ===== END ADDED: Screenshot lightbox ===== */
