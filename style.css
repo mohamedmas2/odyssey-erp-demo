@@ -1349,6 +1349,7 @@ body[data-theme="dark"] .risk-banner p {
 
 .price-tag {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 6px;
   margin: 0 0 6px;
@@ -1359,6 +1360,7 @@ body[data-theme="dark"] .risk-banner p {
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--text);
+  white-space: nowrap;
 }
 
 .price-period {
