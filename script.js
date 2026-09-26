@@ -289,7 +289,7 @@ const translations = {
     whyHeroIntro: "Grounded in an actual review, not generic marketing copy — every feature listed here genuinely exists in the system.",
     whyExploreCta: "Explore the 14 modules",
     whyModule13Title: "Corporate Zakat calculation",
-    whyModule13Text: "An automatic worksheet that classifies zakatable assets and deductible liabilities using the trade-assets method, with the Gregorian-adjusted 2.577% rate — not a flat, technically-off 2.5%.",
+    whyModule13Text: "A built-in Zakat engine automatically classifies zakatable assets and deductible liabilities using the trade-assets method, at the Gregorian-adjusted 2.577% rate — not the technically imprecise flat 2.5%.",
     whyModule14Title: "Point of sale (POS)",
     whyModule14Text: "A built-in POS for retail and walk-in counter sales, connected to the same accounting data as the rest of your system — every sale reflects directly in your reports, with no manual re-entry.",
 
@@ -744,7 +744,7 @@ const translations = {
     whyHeroIntro: "مبني على مراجعة فعلية، مش وصف تسويقي عام — كل ميزة مذكورة هنا موجودة فعليًا في النظام.",
     whyExploreCta: "استعراض المكونات الأربعة عشر",
     whyModule13Title: "حساب زكاة الشركات",
-    whyModule13Text: "ورقة عمل تلقائية بتصنّف الأصول الخاضعة للزكاة والخصوم القابلة للخصم بطريقة صافي الأصول التجارية، بنسبة 2.577% المعدّلة للسنة الميلادية — مش 2.5% العادية اللي فيها فرق تقني.",
+    whyModule13Text: "محرك حساب زكاة مدمج يصنّف الأصول الخاضعة للزكاة والخصوم القابلة للخصم تلقائيًا بطريقة صافي الأصول التجارية، وبنسبة 2.577% المعدّلة للسنة الميلادية — مش 2.5% العادية اللي فيها فرق تقني.",
     whyModule14Title: "نقطة البيع (POS)",
     whyModule14Text: "نظام كاشير مدمج للبيع بالتجزئة والعملاء الداخلين مباشرة، متصل بنفس بيانات نظامك المحاسبي — كل عملية بيع بتنعكس فورًا في تقاريرك المالية من غير ترحيل يدوي.",
 
