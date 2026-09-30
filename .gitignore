@@ -2,3 +2,7 @@
 .codex-sync/
 
 .codex-sync/
+
+# Local helper scripts and tooling (not part of the public site)
+*.ps1
+.claude/
