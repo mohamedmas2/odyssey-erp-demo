@@ -328,6 +328,8 @@ const translations = {
     zakatExcluded4: "Long-term loans (only the portion actually due this year needs a manual judgment call)",
     zakatBannerText: "🕌 New: Odyssey now calculates corporate Zakat automatically, with fiqh precision.",
     zakatBannerCta: "See how →",
+    posBannerText: "🛒 New: Odyssey now includes a POS connected directly to your accounting.",
+    posBannerCta: "See how →",
 
     whyModulesEyebrow: "1. What Odyssey does",
     whyModulesTitle: "Not just \"accounting software\"",
@@ -783,6 +785,8 @@ const translations = {
     zakatExcluded4: "القروض طويلة الأجل (بس القسط المستحق فعليًا السنة دي محتاج قرار بشري)",
     zakatBannerText: "🕌 جديد: أوديسي دلوقتي بيحسب زكاة الشركات تلقائيًا وبدقة فقهية.",
     zakatBannerCta: "شوف إزاي ←",
+    posBannerText: "🛒 جديد: أوديسي دلوقتي فيه نقطة بيع (كاشير) متصلة بحساباتك مباشرة.",
+    posBannerCta: "شوف إزاي ←",
 
     whyModulesEyebrow: "1. أوديسي بيعمل إيه بالظبط",
     whyModulesTitle: "مش \"برنامج محاسبة\" بس",
